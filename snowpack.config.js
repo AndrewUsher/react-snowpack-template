@@ -1,10 +1,12 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
+    public: '/',
+    src: '/dist'
   },
   plugins: [
-    /* ... */
+    '@snowpack/plugin-dotenv',
+    '@snowpack/plugin-react-refresh'
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -22,5 +24,5 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
-  },
-};
+  }
+}
